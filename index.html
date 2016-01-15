@@ -1,0 +1,86 @@
+---
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.flippa_domain }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <section class="Section Section--paddedTop" id="heading">
+          <h1 class="H0 HeadingSection-heading">{{site.flippa_domain}}</h1>
+          <h2 class="H2 HeadingSection-subHeading">FOR SALE</h2>
+        </section>
+        <div class="Section Section--divided Section--paddedExtra Section--b Section--full">
+          <section class="Section">
+            <div class="Split">
+              <div class="Split-pane Split-pane--7">
+                <div class="Form-wrapper">
+                  <div>
+                    <h2 class="H1">{{site.flippa_domain}} is for sale!</h2>
+                    <p>We're using <a href="{{site.flippa_portfolio_url}}">Flippa</a> to facilitate the sale of this domain. Flippa is an industry-leading marketplace for domain transfers.</p>
+                  </div>
+                  <div class="Form">
+                      <div class="Form-formField">
+                        <a href="{{site.flippa_domain_url}}" class="Btn Btn--primary Btn--lg">MAKE AN OFFER</a>
+                        {% if site.flippa_buy_now_price %}
+                          <a href="{{site.flippa_domain_url}}" class="Btn Btn Btn--lg">BUY IT NOW FOR ${{site.flippa_buy_now_price}}</a>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="Split-pane Split-pane--5">
+                <div>
+                  <div class="TraitsList u-mgn-top-30">
+                    <div class="TraitsList-trait">
+                      <h3 class="TraitsList-traitHeading">Available Today</h3>
+                      <p class="TraitsList-traitDesc">This domain has been verified by Flippa and can be purchased immediately.</p>
+                    </div>
+                    <div class="TraitsList-trait">
+                      <h3 class="TraitsList-traitHeading">Escrow</h3>
+                      <p class="TraitsList-traitDesc">The transaction will be completed using Flippa's <a href="https://support.flippa.com/hc/en-us/articles/204006050-Flippa-Escrow-FAQ" target="_blank">escrow service</a>, ensuring a safe and secure transfer for both parties.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="Section Section--paddedExtra Section--divided Section--centered">
+          <h3 class="H2">Getting this domain is easy</h3>
+          <div class="Trifecta">
+            <div class="Trifecta-item"><img class="Trifecta-itemIcon" src="img/offer.png"><span class="Trifecta-itemLabel">1. Make an offer</span></div>
+            <div class="Trifecta-item"><img class="Trifecta-itemIcon" src="img/price.png"><span class="Trifecta-itemLabel">2. Agree on a price</span></div>
+            <div class="Trifecta-item"><img class="Trifecta-itemIcon" src="img/purchase.png"><span class="Trifecta-itemLabel">3. Purchase and transfer</span></div>
+          </div>
+        </section>
+        {% if site.flippa_portfolio_domains %}
+        <section class="Section Section--paddedExtra Section--divided Section--centered">
+          <h3 class="H2">Other great domains we're selling</h3>
+          <div class="DomainList">
+            <div class="DomainList-domain">
+              {% for domain in site.flippa_portfolio_domains %}
+                <a rel="nofollow" href="{{domain.url}}">{{domain.name}}</a>
+              {% endfor %}
+            </div>
+          </div>
+          <a href="{{site.flippa_portfolio_url}}" class="Btn u-mgn-top-30">View our other domains</a>
+        </section>
+        {% endif %}
+        <section class="Section Section--paddedTop Section--centered">
+          <p class="Footer"><a rel="nofollow" href="https://flippa.com/"><span >POWERED BY </span><img class="Footer-logo" src="img/logo.png"></a></p>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
