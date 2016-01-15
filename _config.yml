@@ -6,8 +6,12 @@ flippa_buy_now_price: 549
 # Portfolio settings
 flippa_portfolio_url: https://flippa.com/domain-catalogs/38205
 flippa_portfolio_domains:
-  - name: kyn.me
-  - url: http://flippa.com/5910172
+  -
+    name: kyn.me
+    url: https://flippa.com/5925938-no-title
+#  -
+#    name: seconddomain.com
+#    url: https://flippa.com/1234567
 
 # Build settings
 markdown: kramdown
