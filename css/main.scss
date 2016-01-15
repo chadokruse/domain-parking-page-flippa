@@ -39,8 +39,10 @@ p {
   margin: 0 0 0.75em;
 }
 a {
-  color: #49a2df;
+  //color: #49a2df;
+  color: #8b929a;
   text-decoration: none;
+  border-bottom: 1px dotted #8b929a;
   transition: color 0.1s linear;
 }
 a:active,
@@ -333,6 +335,7 @@ body {
 .DomainList-domain a:visited {
   color: #66bb6a;
   font-size: 1.2em;
+  border: none;
 }
 @media screen and (min-width:0px) {
   .DomainList-domain,
