@@ -13,5 +13,8 @@ flippa_portfolio_domains:
 #    name: seconddomain.com
 #    url: https://flippa.com/1234567
 
+# Other settings
+google_analytics: UA-10850167-1
+
 # Build settings
 markdown: kramdown
